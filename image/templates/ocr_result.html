@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Result</title>
+</head>
+<body>
+    <h1>OCR Result</h1>
+    <div>
+        {% for line in text_lines %}
+            <b>{{ line }}</b>
+        {% endfor %}
+    </div>
+    <br> <br>
+    <h2>Products Found:</h2>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - {{ product.description }}</li>
+        {% empty %}
+            <li>No products found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
